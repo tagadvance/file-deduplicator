@@ -1,0 +1,30 @@
+##
+## Example configuration
+##
+
+# Logs actions without making any changes.
+dryRun: true
+
+# The oldest duplicate file will be moved here
+deduplication: /home/user/deduplication
+
+# Move file to trash directory instead of permanently deleting it.
+safeDelete: true
+
+# The trash directory
+trash: /tmp/trash
+
+# Duplicate files will be replaced with a symlink to the oldest copy.
+replaceWithSymlink: true
+
+# A list of directories to scan. Multiple roots on the same drive is not recommended.
+roots:
+  - '/'
+  -
+# Any file that matches any of the inclusion patterns will be scanned for duplicates.
+inclusions:
+  - '\.(bmp|gif|jpg|jpeg)$'
+  -
+# Any file that matches any of the exclusion patterns will be excluded from the scan.
+exclusions:
+  - '/boot'

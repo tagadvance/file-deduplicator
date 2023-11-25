@@ -1,0 +1,16 @@
+<Configuration status="info">
+  <Appenders>
+    <Console name="OUT">
+      <PatternLayout pattern="%m%n"/>
+    </Console>
+    <File name="FILE" fileName="file-deduplicator.log">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </File>
+  </Appenders>
+  <Loggers>
+    <Root level="info">
+      <AppenderRef ref="OUT"/>
+      <AppenderRef ref="FILE"/>
+    </Root>
+  </Loggers>
+</Configuration>
